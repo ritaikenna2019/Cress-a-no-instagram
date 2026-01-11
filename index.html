@@ -1,0 +1,80 @@
+<!-- 
+  Copyright (c) 2026 Ikenna Rita. 
+  Todos os direitos reservados.
+  Este código é proprietário e não pode ser copiado sem permissão.
+-->
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Inicia o documento HTML e define o idioma como Português do Brasil -->
+
+<head> <!-- Cabeçalho do documento, contém metadados e links para recursos -->
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 (suporta acentos e caracteres especiais) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a visualização para dispositivos móveis (responsividade) -->
+  <title>InstaFlow AI</title> <!-- Define o título que aparece na aba do navegador -->
+
+  <!-- Carrega o Tailwind CSS diretamente via CDN para estilização rápida -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Conecta aos servidores de fontes do Google para melhorar o desempenho de carregamento -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Importa a fonte 'Inter' do Google Fonts com diferentes pesos (300 a 700) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Estilos globais para o corpo da página */
+    body {
+      font-family: 'Inter', sans-serif;
+      /* Define a fonte padrão */
+      background-color: #0f172a;
+      /* Cor de fundo escura (azul noite) */
+      color: #f8fafc;
+      /* Cor do texto claro */
+    }
+
+    /* Classe utilitária para gradiente estilo Instagram */
+    .ig-gradient {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+
+    /* Classe para efeito de 'vidro' (glassmorphism) */
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      /* Fundo branco translúcido */
+      backdrop-filter: blur(10px);
+      /* Desfoque do fundo atrás do elemento */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      /* Borda sutil transparente */
+    }
+  </style>
+
+  <!-- Mapa de importação para definir de onde o navegador deve carregar os módulos React e outros -->
+  <!-- Isso permite usar nomes de pacotes limpos no código sem bundlers complexos em alguns cenários -->
+  <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",  /* Mapeia carregamento do React DOM */
+        "react/": "https://esm.sh/react@^19.2.3/",          /* Mapeia carregamento do React */
+        "react": "https://esm.sh/react@^19.2.3",            /* Alias principal do React */
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0", /* Ícones Lucide */
+        "recharts": "https://esm.sh/recharts@^3.6.0",       /* Biblioteca de gráficos */.
+        
+        "@google/genai": "https://esm.sh/@google/genai@^1.35.0" /* SDK do Google Generative AI */
+      }
+    }
+    </script>
+
+  <!-- Link para folha de estilos CSS global adicional -->
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <!-- Elemento raiz onde o React irá 'renderizar' ou montar a aplicação inteira -->
+  <div id="root"></div>
+
+  <!-- Script principal do tipo módulo que inicializa a aplicação React (index.tsx) -->
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>...
